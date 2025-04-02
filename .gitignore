@@ -1,0 +1,11 @@
+# Ignore all files
+*
+
+# Allow all directories to be explored
+!*/
+
+# Allow Kotlin files
+!*.kt
+
+# Allow README.md
+!README.md
