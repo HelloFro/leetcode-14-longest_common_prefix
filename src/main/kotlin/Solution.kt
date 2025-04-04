@@ -7,6 +7,8 @@ class Solution {
         // Get the shortest string and use it as the prefix
         val shortestStrAsPrefix = strs.minByOrNull { str -> str.length } ?: return ""
 
+        if (shortestStrAsPrefix.isEmpty()){ return "" }
+
         // Ensure the first char in prefix matches every string
         if(!strs.all { str -> str.startsWith(shortestStrAsPrefix.substring(0, 1)) }){
             return ""
