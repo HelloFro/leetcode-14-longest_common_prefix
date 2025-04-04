@@ -17,8 +17,8 @@ class Solution {
         // expand the prefix using the chars of the shortest string
         // and check each against the corresponding indices of each string
         for(i in 1 until shortestStrAsPrefix.length){
-            if(!strs.all { str -> str.startsWith(shortestStrAsPrefix.substring(0, i)) }){
-               return shortestStrAsPrefix.substring(0, i - 1)
+            if(!strs.all { str -> str.startsWith(shortestStrAsPrefix.substring(0, i + 1)) }){
+               return shortestStrAsPrefix.substring(0, i)
             }
         }
 
