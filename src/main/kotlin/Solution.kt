@@ -1,6 +1,8 @@
 package dev.hellofro
 
 class Solution {
+    // Time complexity: O(N * M)
+    // Space Complexity: O(1)
     fun longestCommonPrefix(strs: Array<String>): String {
         if(strs.size == 1){ return strs[0] }
 
@@ -14,7 +16,7 @@ class Solution {
             return ""
         }
 
-        // expand the prefix using the chars of the shortest string
+        // Expand the prefix using the chars of the shortest string
         // and check each against the corresponding indices of each string
         for(i in 1 until shortestStrAsPrefix.length){
             if(!strs.all { str -> str.startsWith(shortestStrAsPrefix.substring(0, i + 1)) }){
@@ -22,7 +24,7 @@ class Solution {
             }
         }
 
-        // the longest common prefix cannot be longer than the shortest string so we return the original
+        // The longest common prefix cannot be longer than the shortest string so we return the original
         return shortestStrAsPrefix
     }
 }
